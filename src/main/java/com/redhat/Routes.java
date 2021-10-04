@@ -36,13 +36,13 @@ public class Routes extends RouteBuilder {
 
     rest()
       .path("/").consumes("application/json").produces("application/json")
-        .put("/put-lead")
+        .put("/lead-status")
 //          .type(Customer.class).outType(CustomerSuccess.class)
           .to("direct:put-customer")
-        .post("/post-lead")
+        .post("/lead-status")
 //          .type(Customer.class).outType(CustomerSuccess.class)
           .to("direct:post-customer")
-        .get("/get-lead")
+        .get("/lead-status")
   //          .type(Customer.class).outType(CustomerSuccess.class)
           .to("direct:get-customer");
     
